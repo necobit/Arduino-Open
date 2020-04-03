@@ -1,7 +1,7 @@
 #include "M5Atom.h"
 
 void setup() {
-  Serial.begin(9600);
+  Serial.begin(115200);
   M5.begin(true, false, true);
   delay(50);
   M5.dis.drawpix(0, 0xf00000);
@@ -31,10 +31,11 @@ void loop() {
 
 void painting() {
   for (int x = 0; x < 25; x++) {
-    Serial.print(r); Serial.print(";");
-    Serial.print(g); Serial.print(";");
-    Serial.print(b); Serial.print(";");
-    Serial.println(color, HEX);
+    Serial.print(r); Serial.print(",");
+    Serial.print(g); Serial.print(",");
+    Serial.println(b); 
+//    Serial.println(",");
+//    Serial.println(color, HEX);
     M5.dis.drawpix(x, color);
   }
   delay(25);
