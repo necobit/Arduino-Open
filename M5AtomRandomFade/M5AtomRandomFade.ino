@@ -6,7 +6,6 @@ void setup() {
   delay(50);
   M5.dis.drawpix(0, 0xf00000);
 }
-uint8_t FSM = 0;
 long color;
 int r = 255;
 int g = 255;
